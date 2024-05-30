@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Currency converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        input[type="text"], input[type="radio"] {
+            margin-bottom: 10px;
+            padding: 8px;
+            width: calc(100% - 16px);
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .radio-container {
+            display: flex;
+            align-items: center;
+        }
+        .radio-container input[type="radio"] {
+            margin-right: 5px;
+        }
+        label {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="call">
+        <label for="curr">Enter the amount</label><br>
+        <input type="text" id="curr" name="curr"><br>
+        <label>Select country to get converted into US-dollars</label><br>
+        <div class="radio-container">
+        	<label for="rupee">India</label>
+            <input type="radio" id="rupee" name="opr" value="rupee">
+        </div>
+        <div class="radio-container">
+        	 <label for="euro">Italy</label>
+            <input type="radio" id="euro" name="opr" value="euro">
+        </div>
+        <div class="radio-container">
+        	<label for="uae">Dubai</label>
+            <input type="radio" id="uae" name="opr" value="uae">
+        </div>
+        <div class="radio-container">
+        	<label for="pound">UK</label>
+            <input type="radio" id="pound" name="opr" value="pound">
+        </div>
+        <input type="submit">
+    </form>
+</body>
+</html>
